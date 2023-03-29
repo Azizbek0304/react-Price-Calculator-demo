@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './pricecalc.css';
 
-function InpRadio({ defaultName, name, text, idlab }) {
-  const [toggleBtn, setToggleBtn] = useState(false);
+function InpRadio({ defaultName, name, text, idlab, checked }) {
   const handleClick = (e) => {
-    setToggleBtn(document.getElementById(e.target.value).checked);
-    console.log(toggleBtn);
+    checked = document.getElementById(e.target.value).checked;
+    console.log(checked);
   };
   return (
-    <label
-      onClick={handleClick}
-      htmlFor={defaultName}
-      className="typeLabel"
-      id={idlab}
-    >
+    <label htmlFor={defaultName} className="typeLabel" id={idlab}>
       {text}
       <input
         onChange={(e) => handleClick(e)}

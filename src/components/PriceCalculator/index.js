@@ -9,12 +9,14 @@ function PriceCalculator() {
       text: 'Wedding ',
       idlab: 'labBM',
       name: 'type',
+      checked: false,
     },
     {
       defaultName: 'bm',
       text: 'Bar Mitzvah ',
       idlab: 'labWedd',
       name: 'type',
+      checked: false,
     },
   ];
 
